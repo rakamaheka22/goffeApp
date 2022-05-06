@@ -1,0 +1,50 @@
+.popover-container {
+  margin-bottom: 0;
+  padding: 16px 0px 0px 0px !important;
+
+  ion-label {
+    margin: 0;
+    &.just-content {
+      margin: 24px 0;
+    }
+  }
+
+  .popover-title {
+    --min-height: 0;
+    --padding-start: 26px;
+    --padding-end: 26px;
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+    --inner-padding-start: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 7px;
+  }
+
+  .popover-content {
+    --min-height: 0;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-bottom: 12px;
+    --inner-padding-start: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 5px;
+  }
+
+  .popover-button {
+    height: 40px;
+    margin: 0px 16px 16px 16px;
+    height: 40px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: none;
+  }
+
+  .red {
+    background-color: var(--ion-color-primary);
+    ion-text {
+      color: white;
+    }
+  }
+}

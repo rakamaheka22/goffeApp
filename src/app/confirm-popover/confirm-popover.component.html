@@ -1,0 +1,24 @@
+<ion-list class="popover-container">
+  <ion-item *ngIf="withTitle" class="popover-title ion-text-center" [lines]="!withContent ? !withButton ? 'none' : 'lines' : 'none'">
+    <ion-label text-wrap [ngStyle]="{'padding-bottom': !withContent ? !withButton ? '24px' :'12px' : 0}">
+      <ion-text class="gil-font weight-font--bold" [color]="titleColor">{{title}}</ion-text>
+    </ion-label>
+  </ion-item>
+  <ion-item class="popover-content ion-text-center" *ngIf="withContent" lines="full">
+    <ion-label text-wrap [ngClass]="{'just-content': !withTitle}" [ngStyle]="{'font-size': contentSize ? (contentSize + 'px') : (14 + 'px')}">
+      <ion-text [color]="contentColor">{{content}}</ion-text>
+    </ion-label>
+  </ion-item>
+  <ion-row no-lines>
+    <ion-col>
+      <ion-button class="button-rounded popover-button" *ngIf="withButton" expand="block" shape="round" color="secondary" (click)="closePopover(buttonTextNo)">
+        <ion-text>{{buttonTextNo}}</ion-text>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-rounded popover-button" *ngIf="withButton" expand="block" shape="round" (click)="closePopover(buttonTextYes)">
+        <ion-text>{{buttonTextYes}}</ion-text>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-list>

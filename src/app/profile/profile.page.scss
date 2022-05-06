@@ -1,0 +1,160 @@
+.bg-pattern {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 300px;
+}
+
+.margin-16 {
+  margin-top: 16px;
+}
+
+.btn-order {
+  margin-top: 10px;
+  font-size: 12px;
+  text-transform: none;
+  min-height: 36px;
+  min-width: 150px;
+}
+
+ion-grid {
+  margin: 6px;
+}
+
+.img-user {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.detail-item {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  color: var(--ion-color-black);
+  img {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}
+
+.detail-address {
+  margin: 16px 0;
+  display: flex;
+  align-items: flex-start;
+  color: var(--ion-color-black);
+  img {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+ion-item {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+  --ripple-color: var(--ion-color-grey);
+
+  .list-logo {
+    border: 1px solid var(--ion-color-grey);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 74px;
+    height: 74px;
+    margin-right: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  .list-title {
+    font-family: 'Gilroy';
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .list-clock {
+    display: flex;
+    align-items: center;
+    margin: 4px 0px;
+
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 12px;
+      color: var(--ion-color-grey);
+    }
+  }
+
+  .list-other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 0px;
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      color: var(--ion-color-black);
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+      }
+  
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .list-promo {
+      display: flex;
+      align-items: center;
+      color: var(--ion-color-secondary);
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+      }
+  
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+ion-fab {
+  bottom: 10px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}

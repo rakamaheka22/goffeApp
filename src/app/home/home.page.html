@@ -1,0 +1,106 @@
+<ion-content>
+  <ion-grid class="grid-home">
+    <ion-row>
+      <ion-col>
+        <div class="logo">
+          <img src="assets/img/goffee.png" height="36px">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="banner">
+          <img src="assets/img/pattern-waves.png">
+          <div class="banner-text text-color--white size-font--24 gil-font weight-font--600">
+            Haus?<br />
+            Mau Ngopi?<br />
+            Pesen dulu kuy!
+          </div>
+        </div>
+        <ion-row no-padding>
+          <ion-col no-padding>
+            <div class="gil-font size-font--16 weight-font--bold">
+              Temukan kedai kopi favoritmu!
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding class="ion-align-items-center">
+          <ion-col size="9" no-padding>
+            <div class="search-input">
+              <ion-item no-lines>
+                <ion-icon class="size-font--14" name="search"></ion-icon>
+                <ion-input class="size-font--12" [(ngModel)]="search" (ionChange)="searchCoffee($event)" placeholder="Nama kedai kopi.."></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col size="3" no-padding>
+            <ion-button class="gil-font size-font--12 weight-font--bold" color="primary" fill="clear" expand="block" (click)="filter()">FILTER</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="isDataNull && !warningSearch">
+          <ion-col>
+            <ion-progress-bar color="secondary" type="indeterminate"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col no-padding>
+            <div class="gil-font size-font--16 weight-font--bold">
+              Kedai kopi terakhir kamu order
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding>
+          <ion-col no-padding>
+            <div class="scrollbox">
+              <ul>
+                <li *ngIf="!transaction">
+                  <div class="text-color--grey size-font--12">
+                    Kamu belum beli kopi
+                  </div>
+                </li>
+                <li *ngFor="let item of transaction; let i = index">
+                  <ion-button class="gil-font size-font--10 weight-font--bold" [color]="randomValue(i)" (click)="goToDetail(item.id)">{{ item.name }}</ion-button>
+                </li>
+              </ul>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="isDataNull && warningSearch">
+          <ion-col class="ion-text-center">
+            <div class="text-color--grey size-font--12">
+              Nama kedai '{{ search }}' tidak ditemukan
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-list lines="none" *ngIf="!isDataNull">
+          <ion-item no-lines button *ngFor="let item of data" (click)="goToDetail(item.id)">
+            <div class="list-logo">
+              <img [src]="item.img">
+            </div>
+            <ion-label>
+              <div class="list-title">{{ item.name }}</div>
+              <div class="list-clock">
+                <img src="assets/icons/md-clock-grey.png">
+                <span>{{ item.open }} - {{ item.close }} WIB</span>
+              </div>
+              <div class="list-other">
+                <div class="list-item">
+                  <img src="assets/icons/md-star-outline.png">
+                  <span>{{ item.rating }}</span>
+                </div>
+                <div class="list-item">
+                  <img src="assets/icons/md-map-pin.png">
+                  <span>{{ item.distance }} km</span>
+                </div>
+                <div class="list-promo">
+                  <img *ngIf="item.promo > 0" src="assets/icons/md-tag.png">
+                  <span *ngIf="item.promo > 0">{{ item.promo * 100 }}% Promo</span>
+                </div>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

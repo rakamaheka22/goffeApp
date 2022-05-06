@@ -1,0 +1,76 @@
+<ion-content scroll-y="false">
+  <div class="modal-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 class="modal-title">{{ title }}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="size-font--12">Rating</div>
+          <ion-radio-group [(ngModel)]="rating" (ionChange)="changeRating($event)">
+            <div class="rating-grid">
+              <div class="rating-item">
+                <ion-radio value="5" class="rating-input-element"></ion-radio>
+                <div class="rating-input">
+                  <img src="assets/icons/md-star.png">
+                  <span>5</span>
+                </div>
+              </div>
+              <div class="rating-item">
+                <ion-radio value="4" class="rating-input-element"></ion-radio>
+                <div class="rating-input">
+                  <img src="assets/icons/md-star.png">
+                  <span>4</span>
+                </div>
+              </div>
+              <div class="rating-item">
+                <ion-radio value="3" class="rating-input-element"></ion-radio>
+                <div class="rating-input">
+                  <img src="assets/icons/md-star.png">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="rating-item">
+                <ion-radio value="2" class="rating-input-element"></ion-radio>
+                <div class="rating-input">
+                  <img src="assets/icons/md-star.png">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="rating-item">
+                <ion-radio value="1" class="rating-input-element"></ion-radio>
+                <div class="rating-input">
+                  <img src="assets/icons/md-star.png">
+                  <span>1</span>
+                </div>
+              </div>
+            </div>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="size-font--12">Buka Tutup Kedai</div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col>
+          <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+        </ion-col>
+        <ion-col size="2">
+          <div class="filter-text">
+            s.d.
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-button class="button-rounded fit-margin" color="primary" expand="full" shape="round" (click)="closeModal()">
+    <ion-text>{{buttonText}}</ion-text>
+  </ion-button>
+</ion-content>

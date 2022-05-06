@@ -1,0 +1,61 @@
+.bg-pattern {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 300px;
+}
+
+.auth-header {
+    margin: 55px 16px 10px 16px;
+}
+
+.bg-illustration {
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-height: 160px;
+    }
+}
+
+.auth-input {
+    margin: 0px 10px;
+    .blank-input {
+        margin: 5px 0px;
+        --padding-end: 12px;
+        --padding-start: 12px;
+        border: 1px solid var(--ion-color-softgrey);
+        border-radius: 5px;
+    }
+
+    ion-item {
+        margin: 5px 0px;
+        border: 1px solid var(--ion-color-softgrey);
+        border-radius: 5px;
+        --highlight-color-invalid: transparent !important;
+        --highlight-color-valid: transparent !important;
+        --padding-top: 0;
+        --padding-bottom: 0;
+        --min-height: 38px;
+
+        ion-input {
+            --padding-top: 0;
+            --padding-bottom: 0;
+        }
+    }
+}
+
+.invalid {
+    border: 1px solid var(--ion-color-red) !important;
+}
+
+.error {
+    font-size: 10px;
+    color: var(--ion-color-red);
+}
+
+.btn-login {
+    margin-top: 10px;
+}

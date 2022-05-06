@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold margin-90">
+          Pengaturan
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list class="account-list">
+    <ion-item button>
+      <img src="assets/icons/md-edit.png" alt="">
+      <ion-label>Kotak Saran & Keluhan</ion-label>
+    </ion-item>
+    <ion-item button (click)="aboutApp()">
+      <img src="assets/icons/md-info.png" alt="">
+      <ion-label>Versi Aplikasi 1.0.0</ion-label>
+    </ion-item>
+    <ion-item button (click)="goToLogin()">
+      <img src="assets/icons/md-log-out.png" alt="">
+      <ion-label class="red">Keluar</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" color="primary" fill="clear" class="button-rounded" shape="round" (click)="backButton()">
+    <strong>Kembali</strong>
+  </ion-button>
+</ion-footer>
+

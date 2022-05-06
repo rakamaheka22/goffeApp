@@ -1,0 +1,362 @@
+.bg-pattern {
+    position: relative;
+    width: 100%;
+    height: 82vw;
+    background: url('/assets/img/waves.png');
+    background-size: cover;
+
+    .obj-driver {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        margin: auto;
+        animation: obj-driver 5s infinite;
+    }
+    @keyframes obj-driver {
+        0% {
+            transform: translateY(-5px);
+        }
+        25% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-4px);
+        }
+        75% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .blob {
+        margin: auto;
+        height:80vw;
+        width:100vw;
+    }
+    .blob path {
+        animation: blob 7s linear  infinite;
+    }
+    @keyframes blob {
+        0% {    d:path("M171.5,-154.5C220,-123,255.5,-61.5,259.6,4.1C263.8,69.8,236.5,139.5,188,172.9C139.5,206.2,69.8,203.1,0.1,203C-69.5,202.9,-139.1,205.7,-185.1,172.4C-231.1,139.1,-253.5,69.5,-253.9,-0.4C-254.2,-70.2,-232.5,-140.5,-186.5,-172C-140.5,-203.5,-70.2,-196.2,-4.4,-191.9C61.5,-187.5,123,-186,171.5,-154.5Z");
+        }
+        25% {   d:path("M157.4,-142.7C205.4,-109.4,246.7,-54.7,244.7,-2C242.7,50.7,197.4,101.4,149.4,135.9C101.4,170.4,50.7,188.7,-9.9,198.6C-70.5,208.5,-140.9,209.9,-176.9,175.4C-212.9,140.9,-214.5,70.5,-200.9,13.6C-187.4,-43.4,-158.7,-86.7,-122.7,-120.1C-86.7,-153.4,-43.4,-176.7,5.7,-182.4C54.7,-188,109.4,-176,157.4,-142.7Z");
+        }
+        50% {    d:path("M130.9,-130.8C167.6,-94.3,193.8,-47.1,202.8,9C211.7,65.1,203.4,130.1,166.8,165.4C130.1,200.8,65.1,206.4,11,195.4C-43.1,184.5,-86.3,156.9,-132.6,121.6C-178.9,86.3,-228.5,43.1,-231.5,-3.1C-234.6,-49.3,-191.2,-98.5,-144.9,-135C-98.5,-171.5,-49.3,-195.3,-1.1,-194.2C47.1,-193.1,94.3,-167.3,130.9,-130.8Z");
+        }
+        75% {    d:path("M125.5,-123.3C157.7,-93.3,175.3,-46.7,177.1,1.8C178.9,50.2,164.7,100.4,132.6,148.6C100.4,196.7,50.2,242.9,-6.1,249C-62.5,255.1,-124.9,221.3,-168.8,173.1C-212.6,124.9,-237.8,62.5,-239.8,-2C-241.8,-66.5,-220.6,-132.9,-176.8,-162.9C-132.9,-192.9,-66.5,-186.5,-9.9,-176.6C46.7,-166.7,93.3,-153.3,125.5,-123.3Z");
+        }
+        100% {    d:path("M171.5,-154.5C220,-123,255.5,-61.5,259.6,4.1C263.8,69.8,236.5,139.5,188,172.9C139.5,206.2,69.8,203.1,0.1,203C-69.5,202.9,-139.1,205.7,-185.1,172.4C-231.1,139.1,-253.5,69.5,-253.9,-0.4C-254.2,-70.2,-232.5,-140.5,-186.5,-172C-140.5,-203.5,-70.2,-196.2,-4.4,-191.9C61.5,-187.5,123,-186,171.5,-154.5Z");
+        }
+    }
+  }
+
+  .map-pattern {
+    position: relative;
+    width: 100%;
+    height: 82vw;
+    background: url('/assets/img/map.png') top center;
+    background-size: 100vw;
+
+    .estimate {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      margin: auto;
+      width: 110px;
+      background: var(--ion-color-white);
+      border-radius: 30px;
+      padding: 7px 10px;
+      display: flex;
+      align-items: center;
+      color: var(--ion-color-black);
+      -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+      -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+      }
+  
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .route {
+      position: absolute;
+      top: 32%;
+      left:0;
+      right:0;
+      width: 270px;
+      height: 130px;
+      margin: auto;
+
+      .obj-user {
+        position: absolute;
+        left: -10px;
+        top: -9vw;
+        width: 10vw;
+        height: 10vw;
+      }
+
+      .obj-driver {
+        position: absolute;
+        right: -20px;
+        bottom: -7vw;
+        width: 14vw;
+        height: 14vw;
+      }
+
+      .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear alternate infinite;
+      }
+      
+      @keyframes dash {
+        from {
+          stroke-dashoffset: 1000;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+
+  .desc-waiting {
+      max-width: 80vw;
+      margin: auto;
+  }
+
+  .margin-40 {
+    margin-top: 40px;
+  }
+  
+  .margin-name {
+    margin: 6px 0px 16px 0px;
+  }
+
+  ion-grid {
+    margin: 6px;
+  }
+  
+  .detail-item {
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-black);
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .detail-item-courier {
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-black);
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  
+    span {
+      font-size: 12px;
+    }
+  }
+  
+  .detail-address {
+    margin: 16px 0;
+    display: flex;
+    align-items: flex-start;
+    color: var(--ion-color-black);
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+  
+  ion-item {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+  
+    .list-logo {
+      border: 1px solid var(--ion-color-grey);
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: 74px;
+      height: 74px;
+      margin-right: 16px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+  
+    .list-title {
+      font-family: 'Gilroy';
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  
+    .list-clock {
+      display: flex;
+      align-items: center;
+      margin: 4px 0px;
+  
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+      }
+  
+      span {
+        font-size: 12px;
+        color: var(--ion-color-grey);
+      }
+    }
+  
+    .list-other {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 4px 0px;
+  
+      .list-item {
+        display: flex;
+        align-items: center;
+        color: var(--ion-color-black);
+        img {
+          width: 14px;
+          height: 14px;
+          margin-right: 5px;
+        }
+    
+        span {
+          font-size: 12px;
+        }
+      }
+  
+      .list-promo {
+        display: flex;
+        align-items: center;
+        color: var(--ion-color-secondary);
+        img {
+          width: 14px;
+          height: 14px;
+          margin-right: 5px;
+        }
+    
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  ion-fab {
+    bottom: 10px;
+  
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .list-space {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &.padding {
+      padding: 0px 16px 16px 16px;
+    }
+
+    &.margin-top {
+      margin-top: 10px;
+    }
+  }
+
+  .item-img {
+    width: 52px;
+    height: 52px;
+
+    &.margin-right {
+        margin-right: 16px;
+    }
+  }
+
+  .flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .item-counter {
+      font-size: 14px;
+      font-family: 'Gilroy';
+      font-weight: bold;
+      margin-right: 16px;
+      margin-top: 3px;
+    }
+    
+    .item-detail {
+
+      .item-title {
+        font-size: 16px;
+        font-family: 'Gilroy';
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      .item-desc {
+        font-size: 10px;
+        color: var(--ion-color-grey);
+      }
+    }
+  }
+
+  .info-promo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+  }
+
+  .margin-5 {
+    margin-bottom: 5px;
+  }
+
+  ion-footer {
+    padding: 10px 0px;
+    background-color: var(--ion-color-white);
+  }

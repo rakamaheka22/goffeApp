@@ -1,0 +1,154 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold margin-40">
+          Pengiriman ke
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!name && !address">
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold margin-name">
+          <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+        </div>
+        <div class="detail-address">
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="name && address">
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold margin-name">
+          {{ name }}
+        </div>
+        <div class="detail-address">
+          <img src="assets/icons/md-map-pin.png">
+          <p>
+            {{ address }}
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold">
+          Daftar Pesanan
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space margin-top" *ngFor="let item of listmenu">
+          <div class="flex-item">
+            <div class="item-counter">
+              {{ item.count }}x
+            </div>
+            <div class="item-detail">
+              <span class="item-title">{{ item.name }}</span><br>
+              <span class="item-desc">{{ item.note }}</span>
+            </div>
+          </div>
+          <div class="gil-font weight-font--bold size-font--14">
+            {{ mappingCurrency(item.price) }}
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Sub Total</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(subTotal) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Pajak</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(tax) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Biaya Pengiriman</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(fee) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="promo > 0">
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Promo</div>
+          <div class="gil-font weight-font--bold size-font--14 text-color--second info-promo">
+            <img src="assets/icons/md-tag.png">
+            <span>{{ promo * 100 }}%</span>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="gil-font weight-font--bold size-font--16">Total</div>
+          <div class="gil-font weight-font--bold size-font--16 text-color--black"><span *ngIf="promo > 0" class="text-color--second strike">{{ mappingCurrency(totalnopromo) }}</span> {{ mappingCurrency(total) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold">
+          Kurir
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold">
+          Raka Fraiza
+        </div>
+        <div class="detail-item">
+          <span class="">
+            Motor Honda Beat - 
+          </span>
+          <span>
+            <strong>D 2983 BFH</strong>
+          </span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Kode Transaksi</div>
+          <div class="gil-font size-font--14 text-color--grey">{{ trxid }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" class="button-rounded" shape="round" routerLink="/tabs/profile" routerDirection="root">
+    Kembali
+  </ion-button>
+</ion-footer>
+

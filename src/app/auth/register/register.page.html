@@ -1,0 +1,105 @@
+<ion-content no-padding>
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <form [formGroup]="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="auth-header">
+            <h1 class="size-font--24 text-color--black">Register</h1>
+            <p class="size-font--12 text-color--grey weight-font--normal">Masukkan data diri kamu dibawah ini</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <div class="bg-illustration">
+            <img src="assets/img/illustration-register.png">
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Nama Lengkap</ion-label>
+            <ion-input class="blank-input size-font--12" formControlName="nama" placeholder="Ketikkan nama..." [class.invalid]="!form.controls.nama.valid && (form.controls.nama.dirty || submitAttempt)" (ionInput)="inputTyping()" required></ion-input>
+            <span class="error" *ngIf="!form.controls.nama.valid && (form.controls.nama.dirty || submitAttempt)">
+              Kamu kelupaan isi nama
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Email</ion-label>
+            <ion-input class="blank-input size-font--12" inputmode="email" formControlName="surel" placeholder="Ketikkan email..." [class.invalid]="!form.controls.surel.valid && (form.controls.surel.dirty || submitAttempt)" (ionInput)="inputTyping()" required></ion-input>
+            <span class="error" *ngIf="submitAttempt && errorControl.surel.errors?.required">
+              Kamu kelupaan isi email
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Kata Sandi</ion-label>
+            <ion-item no-lines [class.invalid]="!form.controls.katasandi.valid && (form.controls.katasandi.dirty || submitAttempt)">
+              <ion-input class="size-font--12" [type]="showPassword ? 'text' : 'password'" clearOnEdit="false" formControlName="katasandi" placeholder="Ketikkan kata sandi..." (ionInput)="inputTyping()" required></ion-input>
+              <ion-icon class="size-font--18" (click)="onPasswordToggle('1')" [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+            </ion-item>
+            <span class="error" *ngIf="submitAttempt && errorControl.katasandi.errors?.required">
+              Kamu kelupaan isi kata sandi
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Ulangi Kata Sandi</ion-label>
+            <ion-item no-lines [class.invalid]="!form.controls.katasandiulang.valid && (form.controls.katasandiulang.dirty || submitAttempt)">
+              <ion-input class="size-font--12" [type]="reshowPassword ? 'text' : 'password'" clearOnEdit="false" formControlName="katasandiulang" placeholder="Ketikkan kata sandi ulang..." (ionInput)="inputPassword($event)" required></ion-input>
+              <ion-icon class="size-font--18" (click)="onPasswordToggle('2')" [name]="reshowPassword ? 'eye-off' : 'eye'"></ion-icon>
+            </ion-item>
+            <span class="error" *ngIf="submitAttempt && errorControl.katasandiulang.errors?.required">
+              Kamu kelupaan isi kata sandi
+            </span>
+            <span class="error" *ngIf="passwordNotMatch">
+              Kata sandi yang diketik belum cocok
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Nomor Telepon</ion-label>
+            <ion-input class="blank-input size-font--12" formControlName="notlp" placeholder="Contoh: 085798291910" [class.invalid]="!form.controls.notlp.valid && (form.controls.notlp.dirty || submitAttempt)" (ionInput)="inputTyping()" required></ion-input>
+            <span class="error" *ngIf="!form.controls.notlp.valid && (form.controls.notlp.dirty || submitAttempt)">
+              Kamu kelupaan isi nomor telepon
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="auth-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Alamat</ion-label>
+            <ion-textarea class="blank-input size-font--12" formControlName="alamat" placeholder="Contoh: Jalan Anggrek No. 22 Bandung" [class.invalid]="!form.controls.alamat.valid && (form.controls.alamat.dirty || submitAttempt)" (ionInput)="inputTyping()" required></ion-textarea>
+            <span class="error" *ngIf="!form.controls.alamat.valid && (form.controls.alamat.dirty || submitAttempt)">
+              Kamu kelupaan isi alamat
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" class="button-rounded" shape="round" (click)="goToLogin()">Daftar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

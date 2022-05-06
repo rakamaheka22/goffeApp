@@ -1,0 +1,13 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="changeCoffeIcon()">
+      <ion-img [src]="isCoffeSelected ? coffeIcon : clickedCoffeIcon"></ion-img>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile" (click)="changeHomeIcon()">
+      <ion-img [src]="isHomeSelected ? homeIcon : clickedHomeIcon"></ion-img>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

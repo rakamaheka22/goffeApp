@@ -1,0 +1,58 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "Kopi Molo Pungkur",
+        "img": "kopi-molo-logo.png",
+        "open": "08:00",
+        "close": "20:30",
+        "rating": 4.7,
+        "distance": 2.3,
+        "promo": 0.3,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Biskuit Molo",
+            "img": "es-kopi-biskuit-molo.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Biskuit",
+            "price": 20000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Matcha Molo",
+            "img": "es-kopi-matcha-molo.jpg",
+            "desc": "Kopi + Susu + Matcha",
+            "price": 25000
+          },
+          {
+            "id": 3,
+            "name": "Havana Cube molo",
+            "img": "havana-cube-molo.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Havana",
+            "price": 28000
+          },
+          {
+            "id": 4,
+            "name": "Kopi Itshizi",
+            "img": "kopi-itshizi.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Keju",
+            "price": 20000
+          },
+          {
+            "id": 5,
+            "name": "Durian Avomolo",
+            "img": "durian-avomolo.jpg",
+            "desc": "Kopi + Moka + Alpukat + Durian",
+            "price": 28000
+          },
+          {
+            "id": 6,
+            "name": "Koko Avomolo",
+            "img": "koko-avomolo.jpg",
+            "desc": "Kopi + Moka + Alpukat + Cokelat",
+            "price": 28000
+          }
+        ]
+      }
+    ]
+  }

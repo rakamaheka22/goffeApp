@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Syura Coffee Dago",
+      "img": "syura-coffee-logo.jpg",
+      "open": "09:00",
+      "close": "21:00",
+      "rating": 4.1,
+      "distance": 5.3,
+      "promo": 0.3,
+      "list_menu": [
+        {
+          "id": 1,
+          "name": "Syura Coffee Iced",
+          "img": "syura-coffee-iced.jpg",
+          "desc": "This our signature! Espresso x Milk x Peppermint Syrup",
+          "price": 22000
+        },
+        {
+          "id": 2,
+          "name": "Dream Catcher.jpg",
+          "img": "dream-catcher.jpg",
+          "desc": "Espresso x Fresh Milk x Rum (0% Alcohol)",
+          "price": 25000
+        },
+        {
+          "id": 3,
+          "name": "Es Kopi Susu Aren",
+          "img": "es-kopi-susu-aren.jpg",
+          "desc": "Basic, Espresso x Milk x Liquid Palm Sugar",
+          "price": 20000
+        },
+        {
+          "id": 4,
+          "name": "Es Kopi Susu White",
+          "img": "es-kopi-susu-white.jpg",
+          "desc": "Iced Coffee Milk that more creamy",
+          "price": 20000
+        },
+        {
+          "id": 5,
+          "name": "Es Kopi Susu Tjampolay",
+          "img": "es-kopi-susu-tjampolay.jpg",
+          "desc": "Espresso x Milk x Tjampolay Syrup",
+          "price": 20000
+        },
+        {
+          "id": 6,
+          "name": "Es Gula Asem Jawa",
+          "img": "es-gula-asem-jawa.jpg",
+          "desc": "Asem jawa x Liquid Brown Sugar. Cheers!! Smile!!",
+          "price": 18000
+        }
+      ]
+    }
+  ]
+}

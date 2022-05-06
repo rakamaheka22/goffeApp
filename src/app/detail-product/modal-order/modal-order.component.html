@@ -1,0 +1,54 @@
+<ion-content scroll-y="false">
+  <div class="modal-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 class="modal-title">{{ title }}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col class="ion-text-center">
+          <img [src]="img" height="230">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <div class="size-font--12 text-color--grey">
+            {{ desc }}
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="modal-input">
+            <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Tambahan catatan</ion-label>
+            <ion-textarea class="blank-input size-font--12"[(ngModel)]="notes"></ion-textarea>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="modal-counter">
+            <div class="counter-input ion-activatable ripple-parent" (click)="counting('minus')">
+              <ion-icon src="assets/icons/md-minus.svg"></ion-icon>
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+            <div class="gil-font weight-font--bold size-font--18">
+              {{ counter }}
+            </div>
+            <div class="counter-input ion-activatable ripple-parent" (click)="counting('plus')">
+              <ion-icon src="assets/icons/md-plus.svg"></ion-icon>
+              <ion-ripple-effect></ion-ripple-effect>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-button *ngIf="counter > 0" class="button-rounded fit-margin" color="primary" expand="full" shape="round" (click)="closeModal()">
+    <ion-text>{{buttonText}}</ion-text>
+  </ion-button>
+  <ion-button *ngIf="counter === 0" class="button-rounded fit-margin" color="danger" expand="full" shape="round" (click)="closeModal()">
+    <ion-text>Batalkan Pesanan</ion-text>
+  </ion-button>
+</ion-content>

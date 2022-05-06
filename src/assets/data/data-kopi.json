@@ -1,0 +1,490 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "Kopi Janji Jiwa Braga",
+        "img": "assets/img/menu/janjijiwa/janji-jiwa-logo.png",
+        "open": "08:00",
+        "close": "22:00",
+        "rating": 4.5,
+        "distance": 1.3,
+        "promo": 0.3,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Hitam",
+            "img": "assets/img/menu/janjijiwa/es-kopi-hitam.png",
+            "desc": "Espresso and mineral water",
+            "price": 15000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Pokat",
+            "img": "assets/img/menu/janjijiwa/es-kopi-pokat.png",
+            "desc": "Espresso and avocado with chocolate ice cream",
+            "price": 20000
+          },
+          {
+            "id": 3,
+            "name": "Es Madu Yuzu",
+            "img": "assets/img/menu/janjijiwa/es-madu-yuzu.png",
+            "desc": "Honey and Yuzu",
+            "price": 25000
+          },
+          {
+            "id": 4,
+            "name": "Es Susu Hojicha",
+            "img": "assets/img/menu/janjijiwa/es-susu-hojicha.png",
+            "desc": "Espresso dan air mineral",
+            "price": 15000
+          },
+          {
+            "id": 5,
+            "name": "Soy Matcha Latte With Ice Cream",
+            "img": "assets/img/menu/janjijiwa/soy-matcha-latte-with-icecream.png",
+            "desc": "Soya milk, matcha tea and matcha ice cream",
+            "price": 30000
+          },
+          {
+            "id": 6,
+            "name": "Soy Matcha Latte",
+            "img": "assets/img/menu/janjijiwa/es-kopi-hitam.png",
+            "desc": "Soya milk and matcha latte",
+            "price": 28000
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Kopi Kenangan BIP",
+        "img": "assets/img/menu/kenangan/kopi-kenangan-logo.png",
+        "open": "10:00",
+        "close": "22:00",
+        "rating": 4.1,
+        "distance": 1.4,
+        "promo": 0.2,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Kopi Kenangan Mantan",
+            "img": "assets/img/menu/kenangan/kopi-kenangan-mantan.jpg",
+            "desc": "Kopi Susu Dengan Gula Aren Asli Indonesia",
+            "price": 18000
+          },
+          {
+            "id": 2,
+            "name": "Dua Shot Iced Shaken",
+            "img": "assets/img/menu/kenangan/dua-shot-iced-shaken.jpg",
+            "desc": "Double Shot Espresso",
+            "price": 22000
+          },
+          {
+            "id": 3,
+            "name": "Hazelnut Latte",
+            "img": "assets/img/menu/kenangan/hazelnut-latte.jpg",
+            "desc": "Espresso, Vanilla, Dan Susu Dengan Sirup Hazelnut",
+            "price": 24000
+          },
+          {
+            "id": 4,
+            "name": "Caramel Latte",
+            "img": "assets/img/menu/kenangan/caramel-latte.jpg",
+            "desc": "Espresso Dan Susu Dengan Sirup Caramel",
+            "price": 24000
+          },
+          {
+            "id": 5,
+            "name": "Susu Boba Gula Aren",
+            "img": "assets/img/menu/kenangan/susu-boba-gula-aren.jpg",
+            "desc": "Es Susu Dengan Gula Aren Asli Indonesia Dan Tambahan Boba",
+            "price": 20000
+          },
+          {
+            "id": 6,
+            "name": "Susu Grass Jelly Gula Aren",
+            "img": "assets/img/menu/kenangan/susu-grass-jelly-gula-aren.jpg",
+            "desc": "Susu Dengan Gula Aren Asli Indonesia Dengan Tambahan Grass Jelly",
+            "price": 20000
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Kedai Kopi Kulo Cimahi",
+        "img": "assets/img/menu/kulo/kopi-kulo-logo.jpg",
+        "open": "08:00",
+        "close": "20:30",
+        "rating": 4.8,
+        "distance": 2.0,
+        "promo": 0,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Coffeenade",
+            "img": "assets/img/menu/kulo/coffeenade.jpg",
+            "desc": "Espresso + Tonic Water + Lemon",
+            "price": 23000
+          },
+          {
+            "id": 2,
+            "name": "Avocatto Coklat",
+            "img": "assets/img/menu/kulo/avocatto-coklat.jpg",
+            "desc": "Espresso + Fresh Alpukat + Ice Cream Coklat",
+            "price": 27000
+          },
+          {
+            "id": 3,
+            "name": "Es Kopi Keju",
+            "img": "assets/img/menu/kulo/es-kopi-keju.jpg",
+            "desc": "Espresso + Susu + Gula Kelapa + Cream Cheese",
+            "price": 25000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Kulo",
+            "img": "assets/img/menu/kulo/es-kopi-kulo.jpg",
+            "desc": "Espresso + Susu + Gula Kelapa",
+            "price": 15000
+          },
+          {
+            "id": 5,
+            "name": "Es Kopi Spekulo",
+            "img": "assets/img/menu/kulo/es-kopi-spekulo.jpg",
+            "desc": "Es Kopi Susu, Gingerbread & Cinnamon Biscuit",
+            "price": 23000
+          },
+          {
+            "id": 6,
+            "name": "Es Kopi Baileys",
+            "img": "assets/img/menu/kulo/es-kopi-baileys.jpg",
+            "desc": "Kopi susu + gula aren + Baileys Syrup (Non Alcohol)",
+            "price": 23000
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Kopi Lain Hati Ciumbuleuit Bandung",
+        "img": "assets/img/menu/lainhati/kopi-lain-hati-logo.png",
+        "open": "09:00",
+        "close": "18:00",
+        "rating": 4.7,
+        "distance": 2.1,
+        "promo": 0.1,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Jatuh Cinta",
+            "img": "assets/img/menu/lainhati/es-kopi-valakor.jpg",
+            "desc": "Espresso, Susu Dan Vanilla Latte",
+            "price": 24000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Cemburu",
+            "img": "assets/img/menu/lainhati/es-kopi-cemburu.jpg",
+            "desc": "Espresso, Susu Dan Creme Brulle",
+            "price": 26000
+          },
+          {
+            "id": 3,
+            "name": "Es Kopi Advokat",
+            "img": "assets/img/menu/lainhati/es-kopi-advokat.jpg",
+            "desc": "Espresso, Jus Alpukat Dan Es Krim Cokelat",
+            "price": 26000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Gemas",
+            "img": "assets/img/menu/lainhati/es-kopi-gemas.jpg",
+            "desc": "Espresso, Susu Dan Creme Irish",
+            "price": 23000
+          },
+          {
+            "id": 5,
+            "name": "Es Kopi Duda Keren",
+            "img": "assets/img/menu/lainhati/es-kopi-duda-keren.jpg",
+            "desc": "Espresso, Susu Dan Creme Durian",
+            "price": 22000
+          },
+          {
+            "id": 6,
+            "name": "Kopi Bucin",
+            "img": "assets/img/menu/lainhati/kopi-bucin.jpg",
+            "desc": "Espresso Dan Susu Panas, Coklat Tabur",
+            "price": 23000
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Kopi Molo Pungkur",
+        "img": "assets/img/menu/molo/kopi-molo-logo.png",
+        "open": "08:00",
+        "close": "20:30",
+        "rating": 4.7,
+        "distance": 2.6,
+        "promo": 0,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Biskuit Molo",
+            "img": "assets/img/menu/molo/es-kopi-biskuit-molo.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Biskuit",
+            "price": 20000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Matcha Molo",
+            "img": "assets/img/menu/molo/es-kopi-matcha-molo.jpg",
+            "desc": "Kopi + Susu + Matcha",
+            "price": 25000
+          },
+          {
+            "id": 3,
+            "name": "Havana Cube molo",
+            "img": "assets/img/menu/molo/havana-cube-molo.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Havana",
+            "price": 28000
+          },
+          {
+            "id": 4,
+            "name": "Kopi Itshizi",
+            "img": "assets/img/menu/molo/kopi-itshizi.jpg",
+            "desc": "Kopi + Gula Aren + Susu + Keju",
+            "price": 20000
+          },
+          {
+            "id": 5,
+            "name": "Durian Avomolo",
+            "img": "assets/img/menu/molo/durian-avomolo.jpg",
+            "desc": "Kopi + Moka + Alpukat + Durian",
+            "price": 28000
+          },
+          {
+            "id": 6,
+            "name": "Koko Avomolo",
+            "img": "assets/img/menu/molo/koko-avomolo.jpg",
+            "desc": "Kopi + Moka + Alpukat + Cokelat",
+            "price": 28000
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Kopi Soe Mekar Wangi",
+        "img": "assets/img/menu/soe/kopi-soe-logo.jpg",
+        "open": "08:00",
+        "close": "23:00",
+        "rating": 4.4,
+        "distance": 2.6,
+        "promo": 0.3,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Cokelat Rum",
+            "img": "assets/img/menu/soe/es-cokelat-rum.jpg",
+            "desc": "cokelat + susu + rum (non alkohol)",
+            "price": 25000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Soe Goela Merah - L",
+            "img": "assets/img/menu/soe/es-kopi-soe-goela-merah-l.jpg",
+            "desc": "Es Kopi Soe Goela Merah Upsize",
+            "price": 26000
+          },
+          {
+            "id": 3,
+            "name": "Es Roegal (Rum Regal) - L",
+            "img": "assets/img/menu/soe/es-roegal-l.jpg",
+            "desc": "Espresso, Vanilla, Dan Susu Dengan Sirup Hazelnut",
+            "price": 32000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Soe Low Fat",
+            "img": "assets/img/menu/soe/es-kopi-soe-low-fat.jpg",
+            "desc": "single espresso + susu low fat + goela merah",
+            "price": 20000
+          },
+          {
+            "id": 5,
+            "name": "Es Kopi Soe Goela Merah Low Fat Double Espresso",
+            "img": "assets/img/menu/soe/es-kopi-soe-goela-merah-low-fat-double-espresso.jpg",
+            "desc": "Double Espresso + Susu Low Fat + Goela Merah",
+            "price": 22000
+          },
+          {
+            "id": 6,
+            "name": "Es Yuzu Soesoe",
+            "img": "assets/img/menu/soe/es-yuzu-soesoe.jpg",
+            "desc": "Yuzu + Susu",
+            "price": 23000
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Kopi Yor Cimahi",
+        "img": "assets/img/menu/yor/kopi-yor-logo.png",
+        "open": "10:00",
+        "close": "22:30",
+        "rating": 4.4,
+        "distance": 3.0,
+        "promo": 0,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Kim",
+            "img": "assets/img/menu/yor/es-kopi-kim.jpg",
+            "desc": "Es Kopi + Alpukat + Es Krim",
+            "price": 30000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Cha",
+            "img": "assets/img/menu/yor/es-kopi-cha.jpg",
+            "desc": "Es Kopi Susu + Matcha",
+            "price": 20000
+          },
+          {
+            "id": 3,
+            "name": "Es Kopi Awa",
+            "img": "assets/img/menu/yor/es-kopi-awa.jpg",
+            "desc": "Es Kopi Susu + Gula Jawa",
+            "price": 18000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Kat",
+            "img": "assets/img/menu/yor/es-kopi-kat.jpg",
+            "desc": "Es Kopi + Alpukat Kocok",
+            "price": 27000
+          },
+          {
+            "id": 5,
+            "name": "Manja Bob",
+            "img": "assets/img/menu/yor/manja-bob.jpg",
+            "desc": "Manis Gula Jawa + Susu + Boba",
+            "price": 24000
+          },
+          {
+            "id": 6,
+            "name": "Regalo Bob",
+            "img": "assets/img/menu/yor/regalo-bob.jpg",
+            "desc": "Susu + Marie Regal + Bubuk Oreo + Boba",
+            "price": 24000
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Starbucks Ciwalk",
+        "img": "assets/img/menu/starbucks/starbucks-logo.jpg",
+        "open": "10:00",
+        "close": "22:00",
+        "rating": 4.6,
+        "distance": 3.3,
+        "promo": 0.5,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Iced Caffe Latte Grande",
+            "img": "assets/img/menu/starbucks/caffe-latte.jpg",
+            "desc": "Rich Full Bodied Espresso with steamed milk and a dollop of foam.",
+            "price": 49000
+          },
+          {
+            "id": 2,
+            "name": "Iced Caffe Americano Grande",
+            "img": "assets/img/menu/starbucks/caffe-americano.jpg",
+            "desc": "Rich Full Bodied Espresso with Ice cubed and Water",
+            "price": 37000
+          },
+          {
+            "id": 3,
+            "name": "Iced Caffe Mocha Grande",
+            "img": "assets/img/menu/starbucks/caffe-mocha.jpg",
+            "desc": "Rich, Full Bodied Espresso with bittersweet mocha sauce and steamed milk",
+            "price": 58000
+          },
+          {
+            "id": 4,
+            "name": "Iced Caramel Macchiato Grande",
+            "img": "assets/img/menu/starbucks/caramel-macchiato.jpg",
+            "desc": "Rich Full Bodied Espresso with vanilla-flavored syrup and milk, topped with caramel drizzle",
+            "price": 62000
+          },
+          {
+            "id": 5,
+            "name": "Cold Brew Coffee Grande",
+            "img": "assets/img/menu/starbucks/cold-brew-coffee.jpg",
+            "desc": "Slow steeped no heat brewed coffee",
+            "price": 45000
+          },
+          {
+            "id": 6,
+            "name": "Vanilla Sweet Cream Cold Brew Grande",
+            "img": "assets/img/menu/starbucks/vanilla-sweet-cream-cold-brew.jpg",
+            "desc": "Slow steeped no heat brewed coffee with vanilla sweet cream",
+            "price": 51000
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Syura Coffee Dago",
+        "img": "assets/img/menu/syura/syura-coffee-logo.png",
+        "open": "09:00",
+        "close": "21:00",
+        "rating": 4.1,
+        "distance": 4.1,
+        "promo": 0.1,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Syura Coffee Iced",
+            "img": "assets/img/menu/syura/syura-coffee-iced.jpg",
+            "desc": "This our signature! Espresso x Milk x Peppermint Syrup",
+            "price": 22000
+          },
+          {
+            "id": 2,
+            "name": "Dream Catcher.jpg",
+            "img": "assets/img/menu/syura/dream-catcher.jpg",
+            "desc": "Espresso x Fresh Milk x Rum (0% Alcohol)",
+            "price": 25000
+          },
+          {
+            "id": 3,
+            "name": "Es Kopi Susu Aren",
+            "img": "assets/img/menu/syura/es-kopi-susu-aren.jpg",
+            "desc": "Basic, Espresso x Milk x Liquid Palm Sugar",
+            "price": 20000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Susu White",
+            "img": "assets/img/menu/syura/es-kopi-susu-white.jpg",
+            "desc": "Iced Coffee Milk that more creamy",
+            "price": 20000
+          },
+          {
+            "id": 5,
+            "name": "Es Kopi Susu Tjampolay",
+            "img": "assets/img/menu/syura/es-kopi-susu-tjampolay.jpg",
+            "desc": "Espresso x Milk x Tjampolay Syrup",
+            "price": 20000
+          },
+          {
+            "id": 6,
+            "name": "Es Gula Asem Jawa",
+            "img": "assets/img/menu/syura/es-gula-asem-jawa.jpg",
+            "desc": "Asem jawa x Liquid Brown Sugar. Cheers!! Smile!!",
+            "price": 18000
+          }
+        ]
+      }
+    ]
+}

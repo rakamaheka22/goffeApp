@@ -1,0 +1,23 @@
+<ion-content scroll-y="false">
+  <div class="modal-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 class="modal-title">{{ title }}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col>
+          <rating id="sample-rating" [(ngModel)]="rate"
+                  readonly="false"
+                  size="default"
+                  (ngModelChange)="changeRating($event)">
+          </rating>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-button class="button-rounded fit-margin" color="primary" expand="full" shape="round" (click)="closeModal()">
+    <ion-text>{{buttonText}}</ion-text>
+  </ion-button>
+</ion-content>

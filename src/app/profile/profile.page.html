@@ -1,0 +1,92 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="img-user">
+          <img src="assets/icons/md-user.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!name && !email && !phone && !address">
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold">
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </div>
+        <div class="detail-item">
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </div>
+        <div class="detail-item">
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </div>
+        <div class="detail-address">
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="name && email">
+      <ion-col>
+        <div class="d-flex gil-font size-font--18 weight-font--bold">
+          {{ name }}
+          <img class="ml-3" src="assets/icons/md-edit-account.png" height="26px" (click)="goToAccount()">
+        </div>
+        <div class="detail-item">
+          <img src="assets/icons/md-mail.png">
+          <span>{{ email }}</span>
+        </div>
+        <div class="detail-item">
+          <img src="assets/icons/md-phone.png">
+          <span>{{ phone }}</span>
+        </div>
+        <div class="detail-address">
+          <img src="assets/icons/md-map-pin.png">
+          <p>
+            {{ address }}
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--16 weight-font--bold">
+          Orderan kopi terakhir kamu
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="!transaction">
+        <div class="text-color--grey size-font--12 margin-16">
+          Kamu belum beli kopi
+        </div>
+      </ion-col>
+      <ion-col *ngIf="transaction">
+        <ion-list lines="none">
+          <ion-item no-lines button *ngFor="let item of transaction" (click)="goToDetail(item.id)">
+            <div class="list-logo">
+              <img [src]="item.img">
+            </div>
+            <ion-label>
+              <div class="list-title">{{ item.name }}</div>
+              <div class="list-clock">
+                <span>{{ item.trxid }}</span>
+              </div>
+              <div class="list-other">
+                <div class="list-item">
+                  <img src="assets/icons/md-clock.png">
+                  <span>{{ item.date }}</span>
+                </div>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" edge slot="fixed">
+    <ion-fab-button routerLink="/setting" routerDirection="root">
+      <img src="assets/icons/md-settings.png">
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

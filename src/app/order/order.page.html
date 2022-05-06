@@ -1,0 +1,150 @@
+<ion-content [fullscreen]="true">
+  <div *ngIf="isNoDelivery" class="bg-pattern">
+
+    <img class="obj-driver" src="assets/img/illustration-waiting.png" height="140px" alt="">
+
+    <svg
+      class="blob"
+      viewBox="0 0 600 600"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="translate(300,300)">
+        <path d="M171.5,-154.5C220,-123,255.5,-61.5,259.6,4.1C263.8,69.8,236.5,139.5,188,172.9C139.5,206.2,69.8,203.1,0.1,203C-69.5,202.9,-139.1,205.7,-185.1,172.4C-231.1,139.1,-253.5,69.5,-253.9,-0.4C-254.2,-70.2,-232.5,-140.5,-186.5,-172C-140.5,-203.5,-70.2,-196.2,-4.4,-191.9C61.5,-187.5,123,-186,171.5,-154.5Z" fill="#FFFFFF" />
+      </g>
+    </svg>
+  
+  </div>
+  <div *ngIf="!isNoDelivery" class="map-pattern">
+
+    <div class="route">
+      <img class="obj-user" src="assets/icons/md-ic_pick.png" alt="">
+
+      <svg width="270" height="130" viewBox="0 0 272 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="path" d="M2.00003 2C2.00003 2 16.2704 38.2999 36.5 41.5C48.3827 43.3797 58 39 66.5 34.5C77.2161 28.8268 85.3238 21.7978 96.5 26.5C108.093 31.3776 100.171 49.5373 111.5 55C125.842 61.9154 134.264 45.0295 149 39C156.786 35.8144 161.406 34.6179 169 31C174.599 28.3325 176.889 24.5646 183 23.5C192.861 21.7818 198.467 27.2664 207 32.5C227.61 45.1411 259.882 73.3148 239 85.5C236.431 86.9989 234.447 86.8099 232 88.5C220.303 96.5782 227.915 121.58 242 123.5C248.245 124.351 252.329 115.395 257.5 119C261.4 121.719 258.26 127.02 261.5 130.5C263.942 133.124 269.5 135 269.5 135" stroke="#07243A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <img class="obj-driver" src="assets/icons/md-ic_dropoff.png" alt="">
+    </div>
+    <div class="estimate">
+      <img src="assets/icons/md-clock.png">
+      <span>10-15 menit</span>
+    </div>
+  </div>
+  <hr class="lines">
+  <ion-grid>
+    <ion-row *ngIf="isNoDelivery">
+      <ion-col class="ion-text-center">
+        <span class="gil-font size-font--18 weight-font--bold">
+          Mencari Kurir . . .
+        </span>
+        <div class="size-font--10 desc-waiting">
+          Mohon tunggu sebentar, kami sedang mencarikan kurir untuk pesanan kamu
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!isNoDelivery">
+      <ion-col>
+        <div class="list-space">
+          <div class="flex-item">
+            <div class="item-img margin-right">
+              <img src="assets/icons/md-courier.png" alt="">
+            </div>
+            <div class="item-detail">
+              <div class="gil-font size-font--18 weight-font--bold margin-5">
+                Raka Fraiza
+              </div>
+              <div class="detail-item-courier">
+                <span>
+                  Motor Honda Beat - 
+                </span>
+                <span>
+                  <strong>D 2983 BFH</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item-img">
+            <img src="assets/icons/md-phone-outline.png" alt="">
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold">
+          Daftar Pesanan
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space margin-top" *ngFor="let item of bookmenu">
+          <div class="flex-item">
+            <div class="item-counter">
+              {{ item.count }}x
+            </div>
+            <div class="item-detail">
+              <span class="item-title">{{ item.name }}</span><br>
+              <span class="item-desc">{{ item.note }}</span>
+            </div>
+          </div>
+          <div class="gil-font weight-font--bold size-font--14">
+            {{ mappingCurrency(item.price) }}
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Sub Total</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(subTotal) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Pajak</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(tax) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Biaya Pengiriman</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(fee) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="promo > 0">
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Promo</div>
+          <div class="gil-font weight-font--bold size-font--14 text-color--second info-promo">
+            <img src="assets/icons/md-tag.png">
+            <span>{{ promo * 100 }}%</span>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div class="list-space padding">
+    <div class="gil-font weight-font--bold size-font--16 text-color--black">Total</div>
+    <div class="gil-font weight-font--bold size-font--16 text-color--black"><span *ngIf="promo > 0" class="text-color--second strike">{{ mappingCurrency(totalnopromo) }}</span> {{ mappingCurrency(total) }}</div>
+  </div>
+  <ion-button expand="full" class="button-rounded" shape="round" (click)="doneOrder()" [disabled]="isNoDone">
+    {{ isNoDelivery ? 'Menunggu Kurir' : 'Selesai' }}
+  </ion-button>
+</ion-footer>
+

@@ -1,0 +1,155 @@
+<ion-content no-padding>
+  <div class="detail-header" *ngFor="let item of data">
+    <div class="detail-logo">
+      <img [src]="item.img">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row *ngIf="!data">
+      <ion-col class="ion-text-center">
+        <div class="detail-info">
+          <div class="info-title">
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+          </div>
+          <div class="info-clock">
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+          </div>
+          <div class="info-other">
+            <div class="info-item">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+            <div class="info-item">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+            <div class="info-promo">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </div>
+          </div>
+          <ion-button class="btn-rating" color="secondary" shape="round" fill="outline" size="small" (click)="showRating(item.name)">
+            Beri Rating
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="data">
+      <ion-col class="ion-text-center" *ngFor="let item of data">
+        <div class="detail-info">
+          <div class="info-title">{{ item.name }}</div>
+          <div class="info-clock">
+            <img src="assets/icons/md-clock-grey.png">
+            <span>{{ item.open }} - {{ item.close }} WIB</span>
+          </div>
+          <div class="info-other">
+            <div class="info-item">
+              <img src="assets/icons/md-star-outline.png">
+              <span>{{ item.rating }}</span>
+            </div>
+            <div class="info-item">
+              <img src="assets/icons/md-map-pin.png">
+              <span>{{ item.distance }} km</span>
+            </div>
+            <div class="info-promo">
+              <img *ngIf="item.promo > 0" src="assets/icons/md-tag.png">
+              <span *ngIf="item.promo > 0">{{ item.promo * 100 }}% Promo</span>
+            </div>
+          </div>
+          <ion-button class="btn-rating" color="secondary" shape="round" fill="outline" size="small" (click)="showRating(item.name)">
+            Beri Rating
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid class="grid-list">
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--14 text-color--grey weight-font--bold">
+          Spesial untuk kamu
+        </div>
+        <ion-list lines="none">
+          <ion-item no-lines button *ngFor="let item of specialmenu">
+            <div class="list-logo">
+              <img [src]="item.img">
+            </div>
+            <ion-label>
+              <div class="list-title">
+                <div class="title-name">{{ item.name }}</div>
+                <div>
+                  <div *ngFor="let book of bookmenu">
+                    {{ book.name === item.name ? book.count + 'x' : '' }}
+                  </div>
+                </div>
+              </div>
+              <div class="list-other">
+                <div>
+                  <div class="list-desc">
+                    <span>{{ item.desc }}</span>
+                  </div>
+                  <div class="list-price">
+                    <span>{{ mappingCurrency(item.price) }}</span>
+                  </div>
+                </div>
+                <ion-button class="btn-add" color="secondary" (click)="goToDetail(item)">
+                  <ion-icon src="assets/icons/md-plus-white.svg"></ion-icon> Tambah
+                </ion-button>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <div class="gil-font size-font--14 text-color--grey weight-font--bold">
+          Daftar Menu
+        </div>
+        <ion-list lines="none">
+          <ion-item no-lines button *ngFor="let item of listmenu">
+            <div class="list-logo">
+              <img [src]="item.img">
+            </div>
+            <ion-label>
+              <div class="list-title">
+                <div class="title-name">{{ item.name }}</div>
+                <div>
+                  <div *ngFor="let book of bookmenu">
+                    {{ book.name === item.name ? book.count + 'x' : '' }}
+                  </div>
+                </div>
+              </div>
+              <div class="list-other">
+                <div>
+                  <div class="list-desc">
+                    <span>{{ item.desc }}</span>
+                  </div>
+                  <div class="list-price">
+                    <span>{{ mappingCurrency(item.price) }}</span>
+                  </div>
+                </div>
+                <ion-button class="btn-add" color="secondary" (click)="goToDetail(item)">
+                  <ion-icon src="assets/icons/md-plus-white.svg"></ion-icon> Tambah
+                </ion-button>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button color="primary" class="button-rounded-clear btn-cancel" expand="block" fill="clear" shape="round" (click)="cancelBook()">
+    Batalkan Pesanan
+  </ion-button>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button expand="full" class="button-rounded" shape="round" [disabled]="countItem === 0 ? true : false" (click)="goToBook()">
+    <div class="button-order">
+      <div>
+        Lihat Keranjang
+      </div>
+      <div class="weight-font--normal">
+        {{ countItem }} item
+      </div>
+      <div>
+        {{ mappingCurrency(total) }}
+      </div>
+    </div>
+  </ion-button>
+</ion-footer>

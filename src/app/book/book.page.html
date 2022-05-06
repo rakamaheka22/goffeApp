@@ -1,0 +1,107 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold margin-40">
+          Pengiriman ke
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold margin-name">
+          {{ name }}
+        </div>
+        <div class="detail-address">
+          <img src="assets/icons/md-map-pin.png">
+          <p>
+            {{ address }}
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--12 text-color--grey weight-font--bold">
+          Daftar Pesanan
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space margin-top" *ngFor="let item of bookmenu">
+          <div class="flex-item">
+            <div class="item-counter">
+              {{ item.count }}x
+            </div>
+            <div class="item-detail">
+              <span class="item-title">{{ item.name }}</span><br>
+              <span class="item-desc">{{ item.note }}</span>
+            </div>
+          </div>
+          <div class="gil-font weight-font--bold size-font--14">
+            {{ mappingCurrency(item.price) }}
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="line-list">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Sub Total</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(subTotal) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Pajak</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(tax) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Biaya Pengiriman</div>
+          <div class="gil-font weight-font--bold size-font--14">{{ mappingCurrency(fee) }}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="promo > 0">
+      <ion-col>
+        <div class="list-space">
+          <div class="size-font--14">Promo</div>
+          <div class="gil-font weight-font--bold size-font--14 text-color--second info-promo">
+            <img src="assets/icons/md-tag.png">
+            <span>{{ promo * 100 }}%</span>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div class="list-space padding">
+    <div class="gil-font weight-font--bold size-font--16 text-color--black">Total</div>
+    <div class="gil-font weight-font--bold size-font--16 text-color--black"><span *ngIf="promo > 0" class="text-color--second strike">{{ mappingCurrency(totalnopromo) }}</span> {{ mappingCurrency(total) }}</div>
+  </div>
+  <ion-button expand="full" class="button-rounded" shape="round" (click)="goToOrder()">
+    Proses Pesanan
+  </ion-button>
+  <ion-button expand="full" size="small" class="button-rounded-clear" fill="clear" shape="round" (click)="backToOrder()">
+    Kembali ke Pesanan
+  </ion-button>
+</ion-footer>
+

@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-pattern">
+    <img src="assets/img/pattern-coffee.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="gil-font size-font--18 weight-font--bold margin-90">
+          Ubah Profil
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="auth-input">
+          <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Nama Lengkap</ion-label>
+          <ion-input class="blank-input size-font--12" [(ngModel)]="name"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="auth-input">
+          <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Email</ion-label>
+          <ion-input class="blank-input size-font--12" inputmode="email" [(ngModel)]="email"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="auth-input">
+          <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Nomor Telepon</ion-label>
+          <ion-input class="blank-input size-font--12" inputmode="number" [(ngModel)]="phone"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="auth-input">
+          <ion-label class="gil-font size-font--14 text-color--grey weight-font--bold">Alamat</ion-label>
+          <ion-textarea class="blank-input size-font--12" inputmode="email" [(ngModel)]="address"></ion-textarea>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" class="button-rounded" shape="round" (click)="saveSetting()">
+    Simpan Perubahan
+  </ion-button>
+  <ion-button expand="full" color="primary" fill="clear" class="button-rounded" shape="round" (click)="backButton()">
+    <strong>Kembali</strong>
+  </ion-button>
+</ion-footer>
+

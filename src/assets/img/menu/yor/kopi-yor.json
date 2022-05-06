@@ -1,0 +1,58 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "Kopi Yor Cimahi",
+        "img": "kopi-yor-logo.png",
+        "open": "10:00",
+        "close": "22:30",
+        "rating": 4.4,
+        "distance": 2.3,
+        "promo": 0.3,
+        "list_menu": [
+          {
+            "id": 1,
+            "name": "Es Kopi Kim",
+            "img": "es-kopi-kim.jpg",
+            "desc": "Es Kopi + Alpukat + Es Krim",
+            "price": 30000
+          },
+          {
+            "id": 2,
+            "name": "Es Kopi Cha",
+            "img": "es-kopi-cha.jpg",
+            "desc": "Es Kopi Susu + Matcha",
+            "price": 20000
+          },
+          {
+            "id": 3,
+            "name": "Es Kopi Awa",
+            "img": "es-kopi-awa.jpg",
+            "desc": "Es Kopi Susu + Gula Jawa",
+            "price": 18000
+          },
+          {
+            "id": 4,
+            "name": "Es Kopi Kat",
+            "img": "es-kopi-kat.jpg",
+            "desc": "Es Kopi + Alpukat Kocok",
+            "price": 27000
+          },
+          {
+            "id": 5,
+            "name": "Manja Bob",
+            "img": "manja-bob.jpg",
+            "desc": "Manis Gula Jawa + Susu + Boba",
+            "price": 24000
+          },
+          {
+            "id": 6,
+            "name": "Regalo Bob",
+            "img": "regalo-bob.jpg",
+            "desc": "Susu + Marie Regal + Bubuk Oreo + Boba",
+            "price": 24000
+          }
+        ]
+      }
+    ]
+  }
